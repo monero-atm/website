@@ -40,11 +40,11 @@
     <nav class="tabs is-boxed is-fullwidth">
       <div class="container">
         <ul>
-          <li class="is-active-speshul">
-            <a>Overview</a>
-          </li>
           <li>
-            <a href="builds.html">Builds</a>
+            <a href="index.html">Overview</a>
+          </li>
+          <li class="is-active-speshul">
+            <a>Builds</a>
           </li>
           <li>
             <a href="donate.html">Donate</a>
@@ -61,16 +61,14 @@
     <div class="columns is-multiline has-text-centered">
       <div class="column is-one-third">
 
-	<div class="card pt-5">
-	  <div class="card-image is-vcentered">
-          <span class="icon is-large">
-            <i class="fa fa-money fa-3x" aria-hidden="true"></i>
-          </span>
+	<div class="card">
+	  <div class="card-image">
+            <img src="images/atm-pico.jpg">
 	  </div>
 
           <div class="card-content">
-          <p class="title is-4">Exchange cash</p>
-          <p>Withdraw Monero for fiat instantly or print vouchers for cash withdrawals.</p>
+            <p class="title is-4"> <a href="pico.html">Pico ("pizza box")</a></p>
+	  <p>One way (EUR → XMR) only, TUI interface.</p>
 	  </div>
 
         </div>
@@ -80,12 +78,12 @@
         <div class="card pt-5">
 	<div class="card-image is-vcentered">
           <span class="icon is-large">
-            <i class="fa fa-globe fa-3x" aria-hidden="true"></i>
+            <i class="fa fa-question fa-3x" aria-hidden="true"></i>
           </span>
 	</div>
 	<div class="card-content">
-          <p class="title is-4">Many currencies</p>
-          <p>Exchange any fiat supported by your bill / coin acceptor of choice.</p>
+          <p class="title is-4">Coming soon</p>
+          <p>Two ways, web UI.</p>
 	  </div>
         </div>
       </div>
@@ -93,55 +91,16 @@
         <div class="card pt-5">
 	<div class="card-image is-vcentered">
           <span class="icon is-large">
-            <i class="fa fa-puzzle-piece fa-3x" aria-hidden="true"></i>
+            <i class="fa fa-question fa-3x" aria-hidden="true"></i>
           </span>
 	  </div>
 	<div class="card-content">
-          <p class="title is-4">Modular</p>
-          <p>Want to use another SBC or a QR scanner instead of RFID? No problem!</p>
+          <p class="title is-4">Coming when it's ready</p>
+          <p>Banks surely won't like this one.</p>
         </div>
 	</div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="columns is-multiline">
-      <div class="column is-one-half">
-
-      <div class="content">
-        <p class="title">Hardware</p>
-        <ul>
-        <li>A single board computer. Orange Pi Zero 2 is our main development platform, but any Pi would work.</li>
-        <li>Bill acceptor. We are mainly developing for BillyOne UN1 but you can easily write integrations for others.</li>
-        <li>Coin acceptor (HX-616).</li>
-        <li>Thermal printer (QR701 TTL interface).</li>
-        <li>QR Reader Module (YHD-M800D micro USB interface, others should work too).</li>
-        <li>7-inch HDMI display.</li>
-        <li>12V 8A power adapter. Depending on your exact components, you might need DC-DC step-down converters. Cables.</li>
-        </ul>
-        <p>Estimated cost for a single build varies between 200 - 400 euros.</p>
-     </div>
-     <div class="content">
-      <p class="title">Software</p>
-      <ul>
-      <li>Written in Go.</li>
-      <li>Secure with configurations only ever stored in memory and remote MoneroPay instance used for transactions.</li>
-      </ul>
-      </div>
-      <div class="content">
-        <p class="title">Discussion</p>
-        <p>Join our <a href="https://matrix.to/#/#atm:kernal.eu">Matrix room.</a></p>
-      </div>
-    </div>
-  <div class="column is-one-half has-text-centered">
-    <div class="content">
-      <video src="images/atm.webm" muted autoplay loop>
-    </div>
-  </div>
-  </div>
   </div>
 </section>
 
