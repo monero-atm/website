@@ -4,203 +4,649 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>The Monero ATM Project</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/speshul.css">
-    <link rel="stylesheet" href="assets/fork-awesome/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/speshul.css" />
+    <link
+      rel="stylesheet"
+      href="assets/fork-awesome/css/fork-awesome.min.css"
+    />
   </head>
   <style>
-  .card { height: 100%;}
-  .address {word-break: break-word;}
+    .card {
+      height: 100%;
+    }
+    .address {
+      word-break: break-word;
+    }
   </style>
   <body>
-  <section class="hero is-primary">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-    <p class="title">
-      The Monero ATM Project
-    </p>
-    <p class="subtitle">
-      A do-it-yourself automated teller machine that runs free software.
-    </p>
-    <span class="icon-text">
-      <span class="icon mx-5">
-        <a href="https://matrix.to/#/#atm:kernal.eu"><i class="fa fa-matrix-org fa-2x"></i></a>
-      </span>
-      <span class="icon mx-5">
-        <a href="https://gitlab.com/monero-atm"><i class="fa fa-gitlab fa-2x"></i></a>
-      </span>
-      <span class="icon mx-5">
-        <a href="https://github.com/monero-atm"><i class="fa fa-github fa-2x"></i></a>
-      </span>
-    </span>
-  </div>
-  </div>
-
-  <div class="hero-foot">
-    <nav class="tabs is-boxed is-fullwidth">
-      <div class="container">
-        <ul>
-          <li>
-            <a href="index.html">Overview</a>
-          </li>
-          <li class="is-active-speshul">
-            <a>Builds</a>
-          </li>
-          <li>
-            <a href="donate.html">Donate</a>
-          </li>
-        </ul>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title">The Monero ATM Project</p>
+          <p class="subtitle">
+            A do-it-yourself automated teller machine that runs free software.
+          </p>
+          <span class="icon-text">
+            <span class="icon mx-5">
+              <a href="https://matrix.to/#/#atm:kernal.eu"
+                ><i class="fa fa-matrix-org fa-2x"></i
+              ></a>
+            </span>
+            <span class="icon mx-5">
+              <a href="https://gitlab.com/monero-atm"
+                ><i class="fa fa-gitlab fa-2x"></i
+              ></a>
+            </span>
+            <span class="icon mx-5">
+              <a href="https://github.com/monero-atm"
+                ><i class="fa fa-github fa-2x"></i
+              ></a>
+            </span>
+          </span>
+        </div>
       </div>
-    </nav>
-  </div>
 
-</section>
+      <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+          <div class="container">
+            <ul>
+              <li>
+                <a href="index.html">Overview</a>
+              </li>
+              <li class="is-active-speshul">
+                <a>Builds</a>
+              </li>
+              <li>
+                <a href="donate.html">Donate</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
 
-<section class="section">
-  <div class="content">
-   <p>This is a copy of the original unbanked whitepaper written by an unknown author on 2020-05-12.</p>
-    <h2>How a Bank Works</h2>
-    <p>The original model of a bank is to store depositor funds, providing security and stability for capital. Deposits are also incentivized by interest earned on funds. The bank must recoup the money it pays out to depositors as “interest earned” so it makes capital available from the pool of depositors' funds to those who don't have any to store, but instead must borrow it. These funds are lent out at a higher rate of interest than is earned by depositors.</p>
+    <section class="section">
+      <div class="content">
+        <p>
+          This is a copy of the original unbanked whitepaper written by an
+          unknown author on 2020-05-12.
+        </p>
+        <h2>How a Bank Works</h2>
+        <p>
+          The original model of a bank is to store depositor funds, providing
+          security and stability for capital. Deposits are also incentivized by
+          interest earned on funds. The bank must recoup the money it pays out
+          to depositors as “interest earned” so it makes capital available from
+          the pool of depositors' funds to those who don't have any to store,
+          but instead must borrow it. These funds are lent out at a higher rate
+          of interest than is earned by depositors.
+        </p>
 
-    <p>So a depositor puts $1000 in a bank for a year, and at the end of the year, has $1050. Meanwhile, the bank has taken that $1000 and loaned it to a borrower for a year, receiving $1100 back in payments including interest. Therefore the bank made money ($50 or 5%), the depositor made money ($50 or 5%) and gained the additional benefits of security and stability, and the borrower got access to capital for a price ($100) which allowed them to go on and participate in another economic venture.</p>
+        <p>
+          So a depositor puts $1000 in a bank for a year, and at the end of the
+          year, has $1050. Meanwhile, the bank has taken that $1000 and loaned
+          it to a borrower for a year, receiving $1100 back in payments
+          including interest. Therefore the bank made money ($50 or 5%), the
+          depositor made money ($50 or 5%) and gained the additional benefits of
+          security and stability, and the borrower got access to capital for a
+          price ($100) which allowed them to go on and participate in another
+          economic venture.
+        </p>
 
-    <p>Once one can exploit this difference, making a market where supply meets demand and collecting a premium for it, one has discovered a profitable business model. Whether or not that's usurious is up to you—our market-making algorithm is fiat-agnostic.</p>
+        <p>
+          Once one can exploit this difference, making a market where supply
+          meets demand and collecting a premium for it, one has discovered a
+          profitable business model. Whether or not that's usurious is up to
+          you—our market-making algorithm is fiat-agnostic.
+        </p>
 
-    <h2>How an ATM Works</h2>
-    <p>ATM's are most often revenue generators for large multinational corporate entities which earn profits by storing capital according to the above banking business model. A premium is paid as a usage fee, for the banking customer's convenient access to funds stored digitally as hard currency at a point of exchange, and the bank, or an authorized third-party operator, takes on the associated risks and operating costs.</p>
-  
-    <h2>How a Crypto ATM Works</h2>
-    <p>Often at a crypto ATM, the premium is paid as a percentage, for the convenience of a cash interface with digital medium not unlike the access to a digital wallet centralized banking offers, and the operator takes on the risk and cost, e.g. a flat 10% fee charged in either direction, creating a local price when referenced against a global market value provided by, most likely, the exchange on which the crypto buffer wallet for the ATM exists.</p>
+        <h2>How an ATM Works</h2>
+        <p>
+          ATM's are most often revenue generators for large multinational
+          corporate entities which earn profits by storing capital according to
+          the above banking business model. A premium is paid as a usage fee,
+          for the banking customer's convenient access to funds stored digitally
+          as hard currency at a point of exchange, and the bank, or an
+          authorized third-party operator, takes on the associated risks and
+          operating costs.
+        </p>
 
-    <p>With crypto, the premium is paid because of the interface with fiat, whereas with banks, the premium is paid due to inherent centralization. Fiat tends to cause a bottleneck in cryptocurrency adoption, whereby crypto ATM operation has tended towards centralization in the market.</p>
+        <h2>How a Crypto ATM Works</h2>
+        <p>
+          Often at a crypto ATM, the premium is paid as a percentage, for the
+          convenience of a cash interface with digital medium not unlike the
+          access to a digital wallet centralized banking offers, and the
+          operator takes on the risk and cost, e.g. a flat 10% fee charged in
+          either direction, creating a local price when referenced against a
+          global market value provided by, most likely, the exchange on which
+          the crypto buffer wallet for the ATM exists.
+        </p>
 
-    <h2>How an Unbanked Machine Works</h2>
-    <p>In our case, a premium is also paid as a percentage, for the as yet untapped convenience of the fiat/XMR interface, and the Operator takes on the risk and cost, but in our case, the market-making algo, or market-maker, determines the status of the cash buffer in the bill recycler and XMR buffer in its wallet, without consulting global market conditions, and sets a local price, agnostic of value.</p>
+        <p>
+          With crypto, the premium is paid because of the interface with fiat,
+          whereas with banks, the premium is paid due to inherent
+          centralization. Fiat tends to cause a bottleneck in cryptocurrency
+          adoption, whereby crypto ATM operation has tended towards
+          centralization in the market.
+        </p>
 
-    <p>This agnosticism with regard to macroeconomic circumstances decenters access to a crypto/fiat interface and allows Operators wide latitude in their choices of policy and technology to execute.</p>
+        <h2>How an Unbanked Machine Works</h2>
+        <p>
+          In our case, a premium is also paid as a percentage, for the as yet
+          untapped convenience of the fiat/XMR interface, and the Operator takes
+          on the risk and cost, but in our case, the market-making algo, or
+          market-maker, determines the status of the cash buffer in the bill
+          recycler and XMR buffer in its wallet, without consulting global
+          market conditions, and sets a local price, agnostic of value.
+        </p>
 
-<p>By making this algorithmic price discovery, the market-maker can reveal a subjective price for XMR that can furthermore be taken as a local value suitable for arbitrage by Speculators. This subjective price reflects the leadership, governance, and economic policies at a local or regional level, with the only constant for comparison being Monero.</p>
+        <p>
+          This agnosticism with regard to macroeconomic circumstances decenters
+          access to a crypto/fiat interface and allows Operators wide latitude
+          in their choices of policy and technology to execute.
+        </p>
 
-  <h2>Fiat ATMs aren't a Community Project</h2>
-  <p>Unbanked is for the Monero community, but what is the Monero community?  What does it need, besides to buy, use, mine, and shill more XMR?
+        <p>
+          By making this algorithmic price discovery, the market-maker can
+          reveal a subjective price for XMR that can furthermore be taken as a
+          local value suitable for arbitrage by Speculators. This subjective
+          price reflects the leadership, governance, and economic policies at a
+          local or regional level, with the only constant for comparison being
+          Monero.
+        </p>
 
-  <p>All currencies, cryptographic and otherwise, require fungibility to a greater or lesser degree.  One of the goals of the Monero project has been to develop fungibility, among other things.  Fungibility is accomplished by means of universal exchange.  By discovering local price fluctuations, a broader equilibrium is possible via local price arbitrage, making Monero less volatile relative to fiat currencies across time and local place, without dependence on centralized exchanges.</p>
+        <h2>Fiat ATMs aren't a Community Project</h2>
+        <p>
+          Unbanked is for the Monero community, but what is the Monero
+          community? What does it need, besides to buy, use, mine, and shill
+          more XMR?
+        </p>
 
-<p>Unbanked requires a community of Operators and Speculators as its stakeholders, outsourcing the burdens of physical security and logistics, maintenance of the ATM hardware, access to a cryptocurrency exchange, and to a fiat banking institution, as needed, to the Operators.</p>
+        <p>
+          All currencies, cryptographic and otherwise, require fungibility to a
+          greater or lesser degree. One of the goals of the Monero project has
+          been to develop fungibility, among other things. Fungibility is
+          accomplished by means of universal exchange. By discovering local
+          price fluctuations, a broader equilibrium is possible via local price
+          arbitrage, making Monero less volatile relative to fiat currencies
+          across time and local place, without dependence on centralized
+          exchanges.
+        </p>
 
-<p>By plying the interface between fiat cash and digital medium, the Speculators bring equilibrium to supply and demand in the fiat/XMR market by arbitraging locally discovered prices among machines and rebalancing buffers in their Unbanked ecosystem. Other models to consider: localmonero, informal networks, possibly some exchanges like Bisq.</p>
+        <p>
+          Unbanked requires a community of Operators and Speculators as its
+          stakeholders, outsourcing the burdens of physical security and
+          logistics, maintenance of the ATM hardware, access to a cryptocurrency
+          exchange, and to a fiat banking institution, as needed, to the
+          Operators.
+        </p>
 
-  </p>There's also a potential role for Producers who will adapt the Unbanked OS to specific and/or commoditized hardware. In a mature ecosystem, Producers could provide hardware maintenance and even logistical (i.e. cash transport) services to Operators, or occupy both niches.</p>
+        <p>
+          By plying the interface between fiat cash and digital medium, the
+          Speculators bring equilibrium to supply and demand in the fiat/XMR
+          market by arbitraging locally discovered prices among machines and
+          rebalancing buffers in their Unbanked ecosystem. Other models to
+          consider: localmonero, informal networks, possibly some exchanges like
+          Bisq.
+        </p>
 
-  <h2>Operators</h2>
-  <p>Operators will maintain the machines and collect the profit generated by the market-making algorithm.  The Operator provides the “buffer”: the initial liquidity in crypto and/or fiat on the exchange to execute a buy at the moment of sale.  Operating costs might include rent, utilities, repairs, security, transport, etc.<p>
+        <p>
+          There's also a potential role for Producers who will adapt the
+          Unbanked OS to specific and/or commoditized hardware. In a mature
+          ecosystem, Producers could provide hardware maintenance and even
+          logistical (i.e. cash transport) services to Operators, or occupy both
+          niches.
+        </p>
 
-  <p>The market-making algo takes on the price control function of centralized entities like banks and governments, but the risk and responsibility of fiat-to-XMR conversion, and the associated due diligence required for KYC and AML, as well as the physical security of the cash, falls to the individual Operators according to their circumstances.</p>
+        <h2>Operators</h2>
+        <p>
+          Operators will maintain the machines and collect the profit generated
+          by the market-making algorithm. The Operator provides the “buffer”:
+          the initial liquidity in crypto and/or fiat on the exchange to execute
+          a buy at the moment of sale. Operating costs might include rent,
+          utilities, repairs, security, transport, etc.
+        </p>
+        <p></p>
 
-<p>The physical security of the machines is a major problem to consider for Operators.  During recent civil unrest in US, a wave of explosive detonations at fiat ATM's indicated their popularity as targets.  There is the potentially secure venue of private crypto clubs, or machines can be listed publicly and licensed through official channels according to their respective jurisdictions, and the open source Unbanked OS can be applied to specified hardware, for example a touchscreen in a high security enclosure.</p>
+        <p>
+          The market-making algo takes on the price control function of
+          centralized entities like banks and governments, but the risk and
+          responsibility of fiat-to-XMR conversion, and the associated due
+          diligence required for KYC and AML, as well as the physical security
+          of the cash, falls to the individual Operators according to their
+          circumstances.
+        </p>
 
-<p>Operators must also account for the opportunity cost of assets being locked up as operating capital in the Unbanked machine, but perhaps this doesn't seem so costly when there is no good alternative available that addresses our issues and questions with the existing fiat ATM/crypto exchange system.  Maintaining the buffers is the cost of autonomy, but because the Operator's revenue is derived on a percentage basis from each transaction, it's in the Operator's interest to operate independently of governments, banks, or other centralizing tendencies.</p>
+        <p>
+          The physical security of the machines is a major problem to consider
+          for Operators. During recent civil unrest in US, a wave of explosive
+          detonations at fiat ATM's indicated their popularity as targets. There
+          is the potentially secure venue of private crypto clubs, or machines
+          can be listed publicly and licensed through official channels
+          according to their respective jurisdictions, and the open source
+          Unbanked OS can be applied to specified hardware, for example a
+          touchscreen in a high security enclosure.
+        </p>
 
-<p>The Unbanked ATM is not designed to compete with the financial war-machine, but to subvert and exploit it for profit.  Most European conventions follow English principles of law for private individuals: everything is permitted unless specifically forbidden, while for public individuals/entities, everything is forbidden unless specifically permitted.  Operators seeking a viable business model should remember that censorship resistance is only theoretically possible until you practice it.</p>
+        <p>
+          Operators must also account for the opportunity cost of assets being
+          locked up as operating capital in the Unbanked machine, but perhaps
+          this doesn't seem so costly when there is no good alternative
+          available that addresses our issues and questions with the existing
+          fiat ATM/crypto exchange system. Maintaining the buffers is the cost
+          of autonomy, but because the Operator's revenue is derived on a
+          percentage basis from each transaction, it's in the Operator's
+          interest to operate independently of governments, banks, or other
+          centralizing tendencies.
+        </p>
 
-<h2>The Market-Maker</h2>
-<p>The Unbanked ATM uses algorithmic price discovery based on local circumstances, reflecting governance and economic policy at local, regional, and other levels.  The market-making algorithm built into the machine's OS helps to discover a local, subjective XMR valuation for each transaction on a case-by-case basis.</p>
+        <p>
+          The Unbanked ATM is not designed to compete with the financial
+          war-machine, but to subvert and exploit it for profit. Most European
+          conventions follow English principles of law for private individuals:
+          everything is permitted unless specifically forbidden, while for
+          public individuals/entities, everything is forbidden unless
+          specifically permitted. Operators seeking a viable business model
+          should remember that censorship resistance is only theoretically
+          possible until you practice it.
+        </p>
 
-<p>Similarly, the .iso can be customized to suit the various commoditized hardware available, according to preference or regulation.  The .iso consists of an open source ATM software stack available to install on a generic machine, e.g. porteus-kiosk.org, with a combination of a Monero wallet and a node.js app to run locally and interact with the user, the buffer wallet, and the bill recycler through a browser and a built-in python function for price discovery.</p>
+        <h2>The Market-Maker</h2>
+        <p>
+          The Unbanked ATM uses algorithmic price discovery based on local
+          circumstances, reflecting governance and economic policy at local,
+          regional, and other levels. The market-making algorithm built into the
+          machine's OS helps to discover a local, subjective XMR valuation for
+          each transaction on a case-by-case basis.
+        </p>
 
-<p>Anyone can download an .iso image, flash it on a stick, install it on a machine, connect it to a bill acceptor, and [Esperanto for] boom, you have an Unbanked ATM.  The case, screen, input devices, receipt printers, can all be determined according to local conditions as needed.</p> 
+        <p>
+          Similarly, the .iso can be customized to suit the various commoditized
+          hardware available, according to preference or regulation. The .iso
+          consists of an open source ATM software stack available to install on
+          a generic machine, e.g. porteus-kiosk.org, with a combination of a
+          Monero wallet and a node.js app to run locally and interact with the
+          user, the buffer wallet, and the bill recycler through a browser and a
+          built-in python function for price discovery.
+        </p>
 
-<p>Our emphasis is on software development as a public project, not hardware at this stage.  A hardware configuration as generically specified as possible will be selected for the initial project.</p> 
+        <p>
+          Anyone can download an .iso image, flash it on a stick, install it on
+          a machine, connect it to a bill acceptor, and [Esperanto for] boom,
+          you have an Unbanked ATM. The case, screen, input devices, receipt
+          printers, can all be determined according to local conditions as
+          needed.
+        </p>
 
-<p>The project is for-profit, insofar as a proposed 1% dev tax on transactions is meant to fund the core dev team with half, and half to go to the Monero general dev fund.  The dev team will make the utmost effort to cycle their XMR back into the local economy via sex workers, drug markets, and casinos.</p>
+        <p>
+          Our emphasis is on software development as a public project, not
+          hardware at this stage. A hardware configuration as generically
+          specified as possible will be selected for the initial project.
+        </p>
 
-<p>As with any cryptocurrency, Monero suffers from the burdensome friction of KYC/AML, a drag on its fungibility.  The moment there is a permissionless way to get to a self-balancing cash/crypto interface, the demand will speak for itself.</p>
+        <p>
+          The project is for-profit, insofar as a proposed 1% dev tax on
+          transactions is meant to fund the core dev team with half, and half to
+          go to the Monero general dev fund. The dev team will make the utmost
+          effort to cycle their XMR back into the local economy via sex workers,
+          drug markets, and casinos.
+        </p>
 
-<h2>Speculators</h2>
-<p>The role of the Speculators is to balance the macroeconomic equilibrium of supply and demand via human interaction with the market-making algo.  Because supply and demand are inconsistent across specific localities, their are various opportunities for arbitrage as certain machines will tend to favor either XMR or fiat cash against consensus market value, as the market-maker correlates the value of the standing offer to its locally determined exigencies.</p> 
+        <p>
+          As with any cryptocurrency, Monero suffers from the burdensome
+          friction of KYC/AML, a drag on its fungibility. The moment there is a
+          permissionless way to get to a self-balancing cash/crypto interface,
+          the demand will speak for itself.
+        </p>
 
-  <p>Someone in our group chat compared this to a deterministic slot machine, essentially an incentivized game of local Unbanked price vs online exchange market value.  Emptying and filling the machine is outsourced to the players in a sort of wave function, players incentivized to catch peaks and troughs.  Arbitrage in a volatile system will rebalance the purchasing power of the machine's respective reservoirs of fiat and crypto currency.</p>
-  <b>Does the Unbanked ATM provide better or worse liquidity and/or price advantage, as an alternative to “banked” solutions?</b>
+        <h2>Speculators</h2>
+        <p>
+          The role of the Speculators is to balance the macroeconomic
+          equilibrium of supply and demand via human interaction with the
+          market-making algo. Because supply and demand are inconsistent across
+          specific localities, their are various opportunities for arbitrage as
+          certain machines will tend to favor either XMR or fiat cash against
+          consensus market value, as the market-maker correlates the value of
+          the standing offer to its locally determined exigencies.
+        </p>
 
-  <p>There could be a reduction of operating costs to empty and fill the machines, because if enough Speculators are using them as part of a healthy arbitrage ecosystem with low fluctuation, they would be highly correlated with local economic and financial conditions. Initially a high state of fluctuation may exist due to a lower volume of Speculators attempting to exchange larger amounts.  At that stage, it would be more profitable for the Operator to rebalance the buffers regularly like a centralized or banked solution, by constant reference to a pegged value.</p>
+        <p>
+          Someone in our group chat compared this to a deterministic slot
+          machine, essentially an incentivized game of local Unbanked price vs
+          online exchange market value. Emptying and filling the machine is
+          outsourced to the players in a sort of wave function, players
+          incentivized to catch peaks and troughs. Arbitrage in a volatile
+          system will rebalance the purchasing power of the machine's respective
+          reservoirs of fiat and crypto currency.
+        </p>
+        <b
+          >Does the Unbanked ATM provide better or worse liquidity and/or price
+          advantage, as an alternative to “banked” solutions?</b
+        >
 
-  <h2>Stimulation of P2P Activity</h2>
-  <p>Alice goes to an Unbanked machine and starts entering bills.  After she puts in 9 US$100 bills, she notices the price for the tenth would be exponentially higher, so she sits down and has a cup of coffee waiting for local turnover.</p>
+        <p>
+          There could be a reduction of operating costs to empty and fill the
+          machines, because if enough Speculators are using them as part of a
+          healthy arbitrage ecosystem with low fluctuation, they would be highly
+          correlated with local economic and financial conditions. Initially a
+          high state of fluctuation may exist due to a lower volume of
+          Speculators attempting to exchange larger amounts. At that stage, it
+          would be more profitable for the Operator to rebalance the buffers
+          regularly like a centralized or banked solution, by constant reference
+          to a pegged value.
+        </p>
 
-  <p>Bob is monitoring the price at that machine on a public index and is notified that the price at that machine is advantageous for him to sell XMR and dump the bill recycler.  Alice may be situated where she can approach Bob directly to deal at spot price, in order to forego the cost of using the machine, or she can choose to pass, and allow Bob to suffer what she would perceive as a relative loss  Because the machine doesn't care about the price, it determines a local price as a function of parameters like the balance of XMR in the wallet, the cash in the fiat buffer, the total capacity of the bill recycler reservoir, and the denominations of currency in the machine.</p>
+        <h2>Stimulation of P2P Activity</h2>
+        <p>
+          Alice goes to an Unbanked machine and starts entering bills. After she
+          puts in 9 US$100 bills, she notices the price for the tenth would be
+          exponentially higher, so she sits down and has a cup of coffee waiting
+          for local turnover.
+        </p>
 
-<p>Are Alice and Bob better off meeting and transacting directly, instead of through the machine?  That's up to local conditions, and how the Operator accounts for those, as well as Alice and Bob's personal circumstances.  For example, the Operator may choose not to list the machine publicly for Bob to monitor, or for Alice to physically observe.</p> 
+        <p>
+          Bob is monitoring the price at that machine on a public index and is
+          notified that the price at that machine is advantageous for him to
+          sell XMR and dump the bill recycler. Alice may be situated where she
+          can approach Bob directly to deal at spot price, in order to forego
+          the cost of using the machine, or she can choose to pass, and allow
+          Bob to suffer what she would perceive as a relative loss Because the
+          machine doesn't care about the price, it determines a local price as a
+          function of parameters like the balance of XMR in the wallet, the cash
+          in the fiat buffer, the total capacity of the bill recycler reservoir,
+          and the denominations of currency in the machine.
+        </p>
 
-<p>Because the machine is agnostic to macroeconomic conditions, the profitability is also up to the Operators' use cases.  There's nothing more sophisticated or second layer than that simple function.  Whether the Operator is bribing police officials, keeping use of the machine limited to a private club, or licensing it through official channels, is for them to decide.</p>
+        <p>
+          Are Alice and Bob better off meeting and transacting directly, instead
+          of through the machine? That's up to local conditions, and how the
+          Operator accounts for those, as well as Alice and Bob's personal
+          circumstances. For example, the Operator may choose not to list the
+          machine publicly for Bob to monitor, or for Alice to physically
+          observe.
+        </p>
 
-<h2>How an Unbanked ATM Maintains Subjective Equilibrium</h2>
-<p>The bill recycler acts as the primary static element which requires regular maintenance to be kept in balance, not too full or empty.  The pursuit of balancing on this mechanical pivot is facilitated by the price algorithm, which generates an economic incentive for arbitrage across local markets.</p>
+        <p>
+          Because the machine is agnostic to macroeconomic conditions, the
+          profitability is also up to the Operators' use cases. There's nothing
+          more sophisticated or second layer than that simple function. Whether
+          the Operator is bribing police officials, keeping use of the machine
+          limited to a private club, or licensing it through official channels,
+          is for them to decide.
+        </p>
 
-<b>The value of neither fiat nor XMR is static: if both are falling, will price incentives insufficient?</b>
+        <h2>How an Unbanked ATM Maintains Subjective Equilibrium</h2>
+        <p>
+          The bill recycler acts as the primary static element which requires
+          regular maintenance to be kept in balance, not too full or empty. The
+          pursuit of balancing on this mechanical pivot is facilitated by the
+          price algorithm, which generates an economic incentive for arbitrage
+          across local markets.
+        </p>
 
-<p>Speculators are only incentivized when the algorithmic formula results in a price out of balance with the actual spot price, arbitraging the imbalance between the spot market price and the value from fiat in the “real” world.</p>
+        <b
+          >The value of neither fiat nor XMR is static: if both are falling,
+          will price incentives insufficient?</b
+        >
 
-<p>The Unbanked machine is agnostic towards prices, markets, and values.  Local price is the only consideration, determined by a pricing algo which accounts only for: liquidity (locally, i.e. in the buffer wallet or in the bill recycler) of XMR or fiat cash; previous transactions at that local point of exchange; and if deemed necessary, an averaged exchange market value as a reference peg.</p> 
+        <p>
+          Speculators are only incentivized when the algorithmic formula results
+          in a price out of balance with the actual spot price, arbitraging the
+          imbalance between the spot market price and the value from fiat in the
+          “real” world.
+        </p>
 
-<p>If a Speculator purchases XMR or fiat cash, the Unbanked machine's equilibrium-seeking algo increases the price at a rate sufficient to incentivize users to rebalance the machine's buffers.  High demand would imply an exponential increase in (local) price to make it prohibitively more expensive to empty the XMR wallet or to fill the bill recycler, thereby prompting a Speculator to come and empty the machine until the decreasing price is back in balance with the market.</p>
+        <p>
+          The Unbanked machine is agnostic towards prices, markets, and values.
+          Local price is the only consideration, determined by a pricing algo
+          which accounts only for: liquidity (locally, i.e. in the buffer wallet
+          or in the bill recycler) of XMR or fiat cash; previous transactions at
+          that local point of exchange; and if deemed necessary, an averaged
+          exchange market value as a reference peg.
+        </p>
 
-<h2>KYC/AML</h2>
-<p>The Monero ecosystem is a fucking miracle of modern technology.  But one thing it lacks is a permissionless method to exchange XMR with fiat cash. The more financial control exerted by banks, the more of a need for the cryptoeconomic release valve of an Unbanked machine.</p>
+        <p>
+          If a Speculator purchases XMR or fiat cash, the Unbanked machine's
+          equilibrium-seeking algo increases the price at a rate sufficient to
+          incentivize users to rebalance the machine's buffers. High demand
+          would imply an exponential increase in (local) price to make it
+          prohibitively more expensive to empty the XMR wallet or to fill the
+          bill recycler, thereby prompting a Speculator to come and empty the
+          machine until the decreasing price is back in balance with the market.
+        </p>
 
-<p>The Unbanked code is open source, for people to run on their own hardware, and each machine's local market-making algo functions independently of the others.  Each machine maintains its own buffers in subjective, preferential balances according to its Operator, in contrast, for example, with localmonero which maintains escrow storage.</p>
+        <h2>KYC/AML</h2>
+        <p>
+          The Monero ecosystem is a fucking miracle of modern technology. But
+          one thing it lacks is a permissionless method to exchange XMR with
+          fiat cash. The more financial control exerted by banks, the more of a
+          need for the cryptoeconomic release valve of an Unbanked machine.
+        </p>
 
-<p>Due to bill recycler limits, the Unbanked ATM lacks the capacity to launder much dirty fiat;  AML is a native feature, given the market-maker's exponential price curve, making high volume cash transactions impractically expensive.</p>
-  
-<h2>The Dead End Critique</h2>
-<p>A critique consistently levied against the Unbanked machine is the problem of an algorithmic dead end:  liquidity and price fluctuation will tend mostly in one direction in one place and another direction in another place;  therefore a possible scenario arises in which exchanges, for example, reflecting consensus market tendencies as predicted for crypto in general over the next decade or so, consistently receive fiat-to-XMR orders to such a degree that machines across all local markets enter a “dead end state.”</p>
+        <p>
+          The Unbanked code is open source, for people to run on their own
+          hardware, and each machine's local market-making algo functions
+          independently of the others. Each machine maintains its own buffers in
+          subjective, preferential balances according to its Operator, in
+          contrast, for example, with localmonero which maintains escrow
+          storage.
+        </p>
 
-<p>In a dead end state, price incentives are insufficient to reverse the direction of price mechanism locally in each machine, given the global tendency to only move in the direction from fiat to XMR exhibited by diverse predictive indices.  The moment the market-maker algo prices XMR “too far” above the price offered by another service such as a KYC exchange or localmonero, the machine will no longer be viable and fall into disuse.</p> 
+        <p>
+          Due to bill recycler limits, the Unbanked ATM lacks the capacity to
+          launder much dirty fiat; AML is a native feature, given the
+          market-maker's exponential price curve, making high volume cash
+          transactions impractically expensive.
+        </p>
 
-<p>“Unless these machines are literally the only option for some customers” was the caveat given by a constructive critic in one of our chats.  What are the scenarios where fiat is more useful or valuable than XMR at spot price?  Who are these possible customers/use cases?</p>
+        <h2>The Dead End Critique</h2>
+        <p>
+          A critique consistently levied against the Unbanked machine is the
+          problem of an algorithmic dead end: liquidity and price fluctuation
+          will tend mostly in one direction in one place and another direction
+          in another place; therefore a possible scenario arises in which
+          exchanges, for example, reflecting consensus market tendencies as
+          predicted for crypto in general over the next decade or so,
+          consistently receive fiat-to-XMR orders to such a degree that machines
+          across all local markets enter a “dead end state.”
+        </p>
 
-<p>Beyond arbitrage opportunities as outlined above in the discussion of the Speculators' role, there are itinerant cash customers who have yet to be adopted into the Monero ecosystem.  Some of the applications worth consideration in the development of an Unbanked .iso release could be for end users engaged in travel involving border crossings, for families making international remittances, for political groups to fundraise at rallies and demonstrations, for a potentially lucrative suite of B2B transactions encompassing materials, labor, and logistics, and for the small business market ranging from pubs and cafes to casinos and brothels.  One only has to ask the question, where is transactional privacy needed?</p>
+        <p>
+          In a dead end state, price incentives are insufficient to reverse the
+          direction of price mechanism locally in each machine, given the global
+          tendency to only move in the direction from fiat to XMR exhibited by
+          diverse predictive indices. The moment the market-maker algo prices
+          XMR “too far” above the price offered by another service such as a KYC
+          exchange or localmonero, the machine will no longer be viable and fall
+          into disuse.
+        </p>
 
-<h2>Use Case Scenario 1</h2>
-<p>Let's say I can put what, about 70 bills in most bill recyclers?  It will depend on what hardware the Unbanked OS is running on, which remains the prerogative of the individual Operators, but most won't have the logistical capacity for larger, more physically secure machines.  And the market-maker will most likely target a number &lt;70 so to maintain capacity for an XMR buy order, although this reserve can be algorithmically decreased as the local XMR price increases.  So here in the US, the most I've got is maybe about $7,000 in an XMR wallet, by stuffing an Unbanked machine, or maybe several, with all the US$100 bills I can fit.</p>
+        <p>
+          “Unless these machines are literally the only option for some
+          customers” was the caveat given by a constructive critic in one of our
+          chats. What are the scenarios where fiat is more useful or valuable
+          than XMR at spot price? Who are these possible customers/use cases?
+        </p>
 
-<p>Then I fly out West to the Triangle, head up the hill to my buddy's grow, inspect the crops, make my picks, and maybe at that point we go up the highway to the roadhouse where there's an Operator maintaining an Unbanked machine, and my buddy takes a deposit by withdrawing fiat from the machine against the XMR wallet I generated earlier, I oversee packaging and loading for transport, pay the balance in cash from the Unbanked machine… oh wait, there's only 50 US$20 bills in there, giving me only $1,000 with which to pay off $7,000 in weed!</p>
+        <p>
+          Beyond arbitrage opportunities as outlined above in the discussion of
+          the Speculators' role, there are itinerant cash customers who have yet
+          to be adopted into the Monero ecosystem. Some of the applications
+          worth consideration in the development of an Unbanked .iso release
+          could be for end users engaged in travel involving border crossings,
+          for families making international remittances, for political groups to
+          fundraise at rallies and demonstrations, for a potentially lucrative
+          suite of B2B transactions encompassing materials, labor, and
+          logistics, and for the small business market ranging from pubs and
+          cafes to casinos and brothels. One only has to ask the question, where
+          is transactional privacy needed?
+        </p>
 
-<p>And locally, the price algorithm is pretty consistently gonna favor XMR over cash, because that's where literally billions in American cash currency ends up, like those 3 counties.  So I'm gonna end up driving all over the state and the West Coast at harvest time, trying to find an ATM that will cough up cash because all these fucking weed bruhs flying into town are bleeding them out that time of year.</p> 
+        <h2>Use Case Scenario 1</h2>
+        <p>
+          Let's say I can put what, about 70 bills in most bill recyclers? It
+          will depend on what hardware the Unbanked OS is running on, which
+          remains the prerogative of the individual Operators, but most won't
+          have the logistical capacity for larger, more physically secure
+          machines. And the market-maker will most likely target a number &lt;70
+          so to maintain capacity for an XMR buy order, although this reserve
+          can be algorithmically decreased as the local XMR price increases. So
+          here in the US, the most I've got is maybe about $7,000 in an XMR
+          wallet, by stuffing an Unbanked machine, or maybe several, with all
+          the US$100 bills I can fit.
+        </p>
 
-<p>Eventually, however, a Speculator cottons onto this particular situation, and starts hitting the Emerald Triangle at harvest time to clean all the cash out of the Unbanked machines and keep the buffers balanced, thus flattening out the high volatility produced by the market-maker.  What the fuck do they do with a billion in cash is really the next problem…  There are external conditions that could prevent Speculators from effectively rebalancing the machines in certain localities, for example, if someone else cottons onto the Speculators moving piles of cash around and starts robbing them or the machines themselves.  Physical security is always the next step with fiat.</p>
+        <p>
+          Then I fly out West to the Triangle, head up the hill to my buddy's
+          grow, inspect the crops, make my picks, and maybe at that point we go
+          up the highway to the roadhouse where there's an Operator maintaining
+          an Unbanked machine, and my buddy takes a deposit by withdrawing fiat
+          from the machine against the XMR wallet I generated earlier, I oversee
+          packaging and loading for transport, pay the balance in cash from the
+          Unbanked machine… oh wait, there's only 50 US$20 bills in there,
+          giving me only $1,000 with which to pay off $7,000 in weed!
+        </p>
 
-<h2>Use Case Scenario 2</h2>
-<p>Here's a more advanced use case to think through… let's say I'm an Operator in the Triangle and at harvest time I'm looking at the local results of my market-making algo, namely a bunch of XMR in my wallet and a dwindling cash buffer, because of all these fly-in customers.  So I become a Speculator and go on the road pulling cash out of San Francisco where more people are putting it into the Unbanked machines and paying a premium for XMR, according to more global market considerations.  One can imagine further advanced scenarios in which there are services offered by Speculators to give back some of their premium for direct access to Operator algo data.  Perhaps Speculators make use of third-party services offered by Producers in secure transport of fiat.</p>
+        <p>
+          And locally, the price algorithm is pretty consistently gonna favor
+          XMR over cash, because that's where literally billions in American
+          cash currency ends up, like those 3 counties. So I'm gonna end up
+          driving all over the state and the West Coast at harvest time, trying
+          to find an ATM that will cough up cash because all these fucking weed
+          bruhs flying into town are bleeding them out that time of year.
+        </p>
 
-<p>Some places may always favor cash because everyone always needs cash there, like Vegas, especially during Defcon when more punters with loaded crypto wallets fly in.  Others may always pay a premium for cash due to productive local conditions, like the Emerald Triangle.  But to go back to the example of the Triangle, as an Operator I may also find relief from growers who've adopted XMR, and have all their bruhs showing up with trunks full of cash that then they need to exchange.  So I'm gonna be earning that premium both ways, and not really end up holding the custodial bag (of cash, especially), at least at harvest time when everyone's active, but I'm only gonna be doing it $30,000 at a time.</p>
+        <p>
+          Eventually, however, a Speculator cottons onto this particular
+          situation, and starts hitting the Emerald Triangle at harvest time to
+          clean all the cash out of the Unbanked machines and keep the buffers
+          balanced, thus flattening out the high volatility produced by the
+          market-maker. What the fuck do they do with a billion in cash is
+          really the next problem… There are external conditions that could
+          prevent Speculators from effectively rebalancing the machines in
+          certain localities, for example, if someone else cottons onto the
+          Speculators moving piles of cash around and starts robbing them or the
+          machines themselves. Physical security is always the next step with
+          fiat.
+        </p>
 
-<p>It's much more useful and inclusive, having worked through that thought exercise, to consider cash customers as Speculators, someone like the original example who wants to fly in and pick up cash to spend in the local economy, because they're just as functional as a Speculator arbitraging the XMR values between Utah and Vegas, in that they both rebalance the bill recyclers.</p>
+        <h2>Use Case Scenario 2</h2>
+        <p>
+          Here's a more advanced use case to think through… let's say I'm an
+          Operator in the Triangle and at harvest time I'm looking at the local
+          results of my market-making algo, namely a bunch of XMR in my wallet
+          and a dwindling cash buffer, because of all these fly-in customers. So
+          I become a Speculator and go on the road pulling cash out of San
+          Francisco where more people are putting it into the Unbanked machines
+          and paying a premium for XMR, according to more global market
+          considerations. One can imagine further advanced scenarios in which
+          there are services offered by Speculators to give back some of their
+          premium for direct access to Operator algo data. Perhaps Speculators
+          make use of third-party services offered by Producers in secure
+          transport of fiat.
+        </p>
 
-<p>Basically, profit is profit is profit, and the banality is that for every use case a critic can formulate that leads to an algorithmic dead end, there's a use case that reverses the direction of the market-maker.  If I know there's always punters in Vegas, that's where I'm gonna dump my fiat.  If I need to generate fiat, I know where to go to plow some XMR into the field.  There's always a block full of bruhs somewhere that need somewhere to stash their cash.  When the bruhs, the growers, the Speculators, and the traveling and border-crossing cash customers are all in the same ecosystem as the Operators, the network effect, albeit a decentralized one, will reduce the volatility of local market fluctuations and maintain the health of the ecosystem.</p>
+        <p>
+          Some places may always favor cash because everyone always needs cash
+          there, like Vegas, especially during Defcon when more punters with
+          loaded crypto wallets fly in. Others may always pay a premium for cash
+          due to productive local conditions, like the Emerald Triangle. But to
+          go back to the example of the Triangle, as an Operator I may also find
+          relief from growers who've adopted XMR, and have all their bruhs
+          showing up with trunks full of cash that then they need to exchange.
+          So I'm gonna be earning that premium both ways, and not really end up
+          holding the custodial bag (of cash, especially), at least at harvest
+          time when everyone's active, but I'm only gonna be doing it $30,000 at
+          a time.
+        </p>
 
-<h2>Some More Critiques</h2>
-<p>The Unbanked machine necessarily ends up as a single point of exchange that reduces  the convention of an exchange's order book, full of existing offers from Speculators buying and selling at various levels, to a single standing order, take-it-or-leave-it.  No Operator who would otherwise run an exchange would see reason to run a machine that isn't the most profitable model available to them.  This machine can't compete with Coinbase or anything like it, in terms of profitable operation.</p>
+        <p>
+          It's much more useful and inclusive, having worked through that
+          thought exercise, to consider cash customers as Speculators, someone
+          like the original example who wants to fly in and pick up cash to
+          spend in the local economy, because they're just as functional as a
+          Speculator arbitraging the XMR values between Utah and Vegas, in that
+          they both rebalance the bill recyclers.
+        </p>
 
-<p>If your revenue is a percentage of each transaction, then your goal as an Operator is to maximize the number of transactions.  The static element of the recycler could diminish the volume of transactions in its algorithmic pursuit of equilibrium.</p>
+        <p>
+          Basically, profit is profit is profit, and the banality is that for
+          every use case a critic can formulate that leads to an algorithmic
+          dead end, there's a use case that reverses the direction of the
+          market-maker. If I know there's always punters in Vegas, that's where
+          I'm gonna dump my fiat. If I need to generate fiat, I know where to go
+          to plow some XMR into the field. There's always a block full of bruhs
+          somewhere that need somewhere to stash their cash. When the bruhs, the
+          growers, the Speculators, and the traveling and border-crossing cash
+          customers are all in the same ecosystem as the Operators, the network
+          effect, albeit a decentralized one, will reduce the volatility of
+          local market fluctuations and maintain the health of the ecosystem.
+        </p>
 
-<p>And what's the point of developing a project that interfaces with fiat when the goal is to get rid of fiat entirely?  Why not just hand out XMR to the dispossessed?</p>
+        <h2>Some More Critiques</h2>
+        <p>
+          The Unbanked machine necessarily ends up as a single point of exchange
+          that reduces the convention of an exchange's order book, full of
+          existing offers from Speculators buying and selling at various levels,
+          to a single standing order, take-it-or-leave-it. No Operator who would
+          otherwise run an exchange would see reason to run a machine that isn't
+          the most profitable model available to them. This machine can't
+          compete with Coinbase or anything like it, in terms of profitable
+          operation.
+        </p>
 
-<h2>The Big Picture</h2>
-<p>This isn't a business strategy; that's open to implementation.  Access to crypto from cash is inherently censored by the centralized model, and there are other applications than trading that provide profitable models, such as international remittances.</p>
+        <p>
+          If your revenue is a percentage of each transaction, then your goal as
+          an Operator is to maximize the number of transactions. The static
+          element of the recycler could diminish the volume of transactions in
+          its algorithmic pursuit of equilibrium.
+        </p>
 
-<p>Even the most fervent maximalists can appreciate that a decentralized algorithmic strategy such as the deployment of open source Unbanked machines as a local supplement to centralized global markets is a potential burn to fiat;  even if independent subjective ATM's running their own locally governed market-makers are doomed to censorship and prohibition:  forcing governments and centralized financial services to play their hand can encourage awareness among end users.</p>
+        <p>
+          And what's the point of developing a project that interfaces with fiat
+          when the goal is to get rid of fiat entirely? Why not just hand out
+          XMR to the dispossessed?
+        </p>
 
-<p>And the Unbanked machine isn't designed to compete; it's designed to exploit the gaps and seek equilibrium.</p>
-  </div>
-</section>
+        <h2>The Big Picture</h2>
+        <p>
+          This isn't a business strategy; that's open to implementation. Access
+          to crypto from cash is inherently censored by the centralized model,
+          and there are other applications than trading that provide profitable
+          models, such as international remittances.
+        </p>
 
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>The Monero ATM Project</strong> is for education and experimentation.
-      Be mindful of the regulations and laws in your area. The source code is licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a>, the website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
-    </p>
-  </div>
-</footer>
+        <p>
+          Even the most fervent maximalists can appreciate that a decentralized
+          algorithmic strategy such as the deployment of open source Unbanked
+          machines as a local supplement to centralized global markets is a
+          potential burn to fiat; even if independent subjective ATM's running
+          their own locally governed market-makers are doomed to censorship and
+          prohibition: forcing governments and centralized financial services to
+          play their hand can encourage awareness among end users.
+        </p>
+
+        <p>
+          And the Unbanked machine isn't designed to compete; it's designed to
+          exploit the gaps and seek equilibrium.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>The Monero ATM Project</strong> is for education and
+          experimentation. Be mindful of the regulations and laws in your area.
+          The source code is licensed under
+          <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a>,
+          the website content is licensed
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >CC BY-NC-SA 4.0</a
+          >.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
